@@ -19,21 +19,33 @@
 
 
 
-<h1 style="text-align:center;">Mundo Pastas</h1>
+<h1>Mundo Pastas</h1>
 
 <section class="menu">
   <h2>Menú</h2>
   <div class="grid" id="menu-container"></div>
 </section>
 
-<div class="pedido-box">
-  <h3>Tu pedido</h3>
-<div id="lista-pedido"></div>
+<div class="carrito">
+  <div class="carrito-icono">🛒</div>
 
-  <p id="total">Total: $0</p>
-  <button onclick="enviarWhatsApp()">Pedir</button>
+  <div class="pedido-box">
+  
+    <div class="barra-carrito">
+      <span>Tu pedido</span>
+      <button class="btn-cerrar">✕</button>
+    </div>
+
+    <p id="mensaje-vacio">No hay items en el carrito de compras</p>
+
+    <div id="lista-pedido"></div>
+    <p id="total">Total: $0</p>
+    <button onclick="enviarWhatsApp()">Pedir</button>
+  </div>
 </div>
 
+<script src="categorias.js"></script>
+<script src="carrito.js"></script>
 <script src="script.js"></script>
 
 </body>

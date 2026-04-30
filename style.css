@@ -14,12 +14,11 @@ body {
 
 .menu {
   padding: 20px;
-  margin-right: 320px; /* espacio reservado para el carrito */
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 👈 4 columnas */
+  grid-template-columns: repeat(4, 1fr); 
   gap: 15px;
 }
 
@@ -28,32 +27,93 @@ body {
   padding: 10px;
   border-radius: 10px;
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card h4 {
+  min-height: 48px; 
 }
 
 button {
-  margin-top: 10px;
+  margin-top: auto;
   width: 100%;
   padding: 10px;
   cursor: pointer;
 }
 
-.pedido-box {
+
+.carrito {
   position: fixed;
   bottom: 20px;
   right: 20px;
+}
+
+/* ICONO */
+.carrito-icono {
+  width: 60px;
+  height: 60px;
+  background: #111;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* PANEL */
+.pedido-box {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
   width: 280px;
-  height: 300px;   
+  height: 300px;
   background: #111;
   padding: 15px;
   border-radius: 10px;
-  display: flex;
+  display: none;
   flex-direction: column;
+}
+
+#mensaje-vacio {
+  text-align: center;
+  color: #eaeaea97;
+  font-size: 14px;
+  margin-top: 50px;
+}
+
+/* CUANDO ESTÁ ABIERTO */
+.carrito.abierto .pedido-box {
+  display: flex;
+}
+
+
+/* BOTON CERRRAR */
+
+.barra-carrito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.barra-carrito span {
+  white-space: nowrap;
+}
+
+.btn-cerrar {
+  margin-left: 180px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 
 .item-pedido {
   display: flex;
-  align-items: center;      /* alineación vertical correcta */
+  align-items: center;   
   justify-content: space-between;
   gap: 8px;
   margin-bottom: 2px;
@@ -61,7 +121,7 @@ button {
 
 .texto-item {
   flex: 1;
-  min-width: 0;             /* clave para que no rompa */
+  min-width: 0;           
   font-size: 14px;
 
   white-space: nowrap;
@@ -70,13 +130,13 @@ button {
 }
 
 .btn-eliminar {
-  flex: 0 0 auto;           /* 👈 MEJOR que solo flex-shrink */
+  flex: 0 0 auto;         
   background: transparent;
   border: none;
   color: red;
   font-size: 14px;
   cursor: pointer;
-  width: 20px;              /* 👈 ancho fijo */
+  width: 20px;             
   height: 20px;
   display: flex;
   align-items: center;
@@ -89,14 +149,13 @@ button {
   overflow-x: hidden;
   margin: 5px 0;
 
-  /* Oculta scroll en Firefox */
   scrollbar-width: none;
 
-  /* Oculta scroll en IE y Edge viejo */
+
   -ms-overflow-style: none;
 }
 
-/* Oculta scroll en Chrome, Edge, Safari */
+
 #lista-pedido::-webkit-scrollbar {
   display: none;
 }
