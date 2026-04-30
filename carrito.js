@@ -64,7 +64,7 @@ function enviarWhatsApp() {
   let mensaje = "Hola, quiero pedir:%0A";
 
   pedido.forEach(p => {
-    mensaje += `- ${p.nombre}(x${p.cantidad}) ($${p.precio})%0A`;
+    mensaje += `- ${p.nombre}(x${p.cantidad})%0A`;
   });
 
   let total = pedido.reduce((acc, p) => acc + (p.precio * p.cantidad), 0);
