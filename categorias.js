@@ -25,6 +25,15 @@ const categorias = [
       { id: 2, nombre: "Salsa Mixta", precio: 1500 },
       { id: 3, nombre: "Salsa Blanca", precio: 1800 }
     ]
+  },
+  {
+    nombre: "Canelones",
+    items: [
+      { id: 1, nombre: "Canelones Ricota", precio: 2700 },
+      { id: 2, nombre: "Canelones J&Q", precio: 2700 },
+      { id: 3, nombre: "Canelones Carne", precio: 2700 },
+      { id: 4, nombre: "Canelones Roquefort", precio: 2700 }
+   ]
   }
 ];
 
