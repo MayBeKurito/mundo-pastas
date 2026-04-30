@@ -33,7 +33,7 @@ function actualizarTotal() {
     lista += `
       <div class="item-pedido">
         <span class="texto-item">
-          •${p.nombre} (${p.categoria}) x${p.cantidad} ($${subtotal})
+          •${p.nombre} x${p.cantidad} ($${subtotal})
         </span>
         <button class="btn-eliminar" onclick="eliminar(${index})">✕</button>
       </div>
