@@ -70,5 +70,5 @@ function enviarWhatsApp() {
   let total = pedido.reduce((acc, p) => acc + (p.precio * p.cantidad), 0);
   mensaje += `%0ATotal: $${total}`;
 
-  window.open(`https://wa.me/5491135598809?text=${mensaje}`);
+ window.open(`https://wa.me/5491135598809?text=${encodeURIComponent(mensaje)}`);
 }
